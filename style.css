@@ -1,23 +1,85 @@
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     padding: 20px;
     border-bottom: 1px solid #ccc;
   }
+
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    letter-spacing:3px;
   }
+
+  nav {
+    flex:grow;
+  }
+
   nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 20px; /* 导航项之间的间距 */
+    justify-content: flex-end; /* 将导航项整体向右对齐 */
+    align-items: center; /* 确保导航项垂直居中 */
+    margin: 0; /* 去掉默认外边距 */
+    padding: 0; /* 去掉默认内边距 */
   }
+  
+  
+  /* 导航链接样式 */
   nav ul li a {
-    text-decoration: none;
     color: #000;
-    font-weight: bold;
+    text-decoration: none;
+    position: relative; /* 用于后续的伪元素定位 */
+    display: inline-block; /* 保持链接的默认内联块属性 */
+    padding: 5px 10px; /* 增加链接点击区域 */
+  }
+
+  .EN {
+    font-weight: bold; /* 使 "EN" 加粗 */
+}
+
+  .PRICING_DESIGN {
+    text-decoration:underline;
+}
+
+  .nav-icons {
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .nav-icons .dot{
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+
+  .nav-icons .menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    position: relative;
+  }
+  
+  .nav-icons .menu-icon::before,
+  .nav-icons .menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    left: 0;
+  }
+  
+  .nav-icons .menu-icon::before {
+    top: -8px;
+  }
+  
+  .nav-icons .menu-icon::after {
+    bottom: -8px;
   }
 
   .main-title {

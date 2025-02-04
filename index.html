@@ -1,99 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Optimized Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <!--顶部导航栏  -->
-    <header>
-        <div class="logo">MIONSILI</div>
-        <nav>
-          <ul>
-            <li><a class="DE" href="#">DE</a></li>
-            <li><a class="EN" href="#">EN</a></li>
-            <li><a class="BRANDING_UNIVERSAL" href="#">BRANDING UNIVERSAL</a></li>
-            <li><a class="PRICING_DESIGN" href="#">PRICING DESIGN</a></li>
-          </ul>
-        </nav>
-        <div class="nav-icons">
-            <span class="dot"></span>
-            <div class="menu-icon"></div>
-        </div>
-      </header>
 
-      <section class="main-title">
-        <h1>CREATIVE DESIGNER <br> PASSION AND <span>EXPERIENCE.</span></h1>
-        <p>User interface designer with a wealth of experience...</p>
-      </section>
-
-      <section class="profile-card">
-        <img src="profile.jpg" alt="Mike Davids">
-        <h2>Mike Davids</h2>
-        <ul>
-          <li>Profession: UI Designer</li>
-          <li>Date of Birth: 11 November 1985</li>
-          <li>Education: Higher Education</li>
-        </ul>
-        <button>Send Message</button>
-      </section>
-
-      <section class="experience-education">
-        <div class="experience">
-          <h3>Experience</h3>
-          <ul>
-            <li>
-              <h4>Horizon Value Expert</h4>
-              <p>2021 - Present</p>
-              <p>UI Director...</p>
-            </li>
-            <li>
-              <h4>Puento – Visual Concept</h4>
-              <p>2016 - 2021</p>
-              <p>Senior Product Designer...</p>
-            </li>
-          </ul>
+<!-- 顶部导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MIONSILI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">DE</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">EN</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">BRANDING UNIVERSAL</a></li>
+                <li class="nav-item"><a class="nav-link text-decoration-underline" href="#">PRICING DESIGN</a></li>
+            </ul>
         </div>
-        <div class="education">
-          <h3>Education</h3>
-          <ul>
-            <li>
-              <h4>Glory Charter High School</h4>
-              <p>2014 - 2017</p>
-              <p>Completed with honors...</p>
-            </li>
-            <li>
-              <h4>Ambers Community College</h4>
-              <p>2009 - 2012</p>
-              <p>Initial learning to program...</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+    </div>
+</nav>
 
-      <section class="awards-skills">
-        <div class="awards">
-          <h3>Awards</h3>
-          <ul>
-            <li>Interface Designs - May 2022</li>
-            <li>Graphics - Jan 2020</li>
-          </ul>
-        </div>
-        <div class="skills">
-          <h3>Skills</h3>
-          <div class="skill">
-            <span>Microsoft Office</span>
-            <div class="progress-bar" style="width: 50%;"></div>
+<!-- 主要内容 -->
+<!-- 主要内容 -->
+<div class="container my-5">
+  <!-- 标题部分 -->
+  <div class="text-center mb-4">
+      <h1 class="fw-bold">Creative Designer Passion and <span class="text-decoration-underline">Experience</span>.</h1>
+      <p class="text-muted">User interface designer with a wealth of experience...</p>
+  </div>
+
+  <!-- 个人信息 + 经验 -->
+  <div class="row">
+      <!-- 个人信息 -->
+      <div class="col-sm-12 col-md-4">
+          <div class="profile-card text-center p-3 border rounded shadow-sm">
+              <img src="./imgs/u6547782251_Science_fiction_--v_6.1_fa55d887-1c4d-43c9-8b52-ecc9c6e29213_3 (1).png" alt="Profile Picture" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
+              <h2 class="profile-name">Mike Davids</h2>
+              <p class="profile-description">UI Designer based in New York with a passion for improving user experience.</p>
+              <table class="table table-borderless">
+                  <tr><td><strong>Profession:</strong></td><td>UI Designer</td></tr>
+                  <tr><td><strong>Date of Birth:</strong></td><td>11 November 1985</td></tr>
+                  <tr><td><strong>Education:</strong></td><td>Higher Education</td></tr>
+              </table>
+              <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#contactModal">SEND MESSAGE</button>
           </div>
-          <div class="skill">
-            <span>STUDIO Editor</span>
-            <div class="progress-bar" style="width: 80%;"></div>
+      </div>
+
+      <!-- 经验 -->
+      <div class="col-sm-12 col-md-8">
+          <h2 class="fw-bold border-bottom pb-2">EXPERIENCE</h2>
+          <div class="mb-3">
+              <h5 class="fw-bold">Horizon Value Expert</h5>
+              <p class="text-muted">2021 – Present | UI Director</p>
+              <p>Leading wireframe projects for innovative applications.</p>
           </div>
+          <div class="mb-3">
+              <h5 class="fw-bold">Puento – Visual Concept</h5>
+              <p class="text-muted">2016 – 2021 | Senior Product Designer</p>
+              <p>Designing projects in collaboration with event creators.</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- 教育 + 奖项 -->
+  <div class="row mt-5">
+      <div class="col-sm-12 col-md-6">
+          <h2 class="fw-bold border-bottom pb-2">EDUCATION</h2>
+          <div class="mb-3">
+              <h5 class="fw-bold">Glory Charter High School</h5>
+              <span class="badge bg-dark">2014 – 2017</span>
+              <p class="text-muted">Graduated with honors.</p>
+          </div>
+          <div class="mb-3">
+              <h5 class="fw-bold">Guli CE Academy</h5>
+              <span class="badge bg-dark">2012 – 2014</span>
+              <p class="text-muted">Marketing and product promotion specialist.</p>
+          </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6">
+          <h2 class="fw-bold border-bottom pb-2">AWARDS</h2>
+          <div class="mb-3">
+              <h5 class="fw-bold">Interface Designs <span class="badge bg-dark">1</span></h5>
+              <p class="text-muted">VERDO© | Agency Website Design</p>
+          </div>
+          <div class="mb-3">
+              <h5 class="fw-bold">Graphics <span class="badge bg-dark">2</span></h5>
+              <p class="text-muted">Bespoke Creative Ltd.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+    <!-- 技能 -->
+    <div class="mt-5">
+        <h2>Skills</h2>
+        <div class="mb-3">
+            <label>Microsoft Office</label>
+            <div class="progress">
+                <div class="progress-bar" style="width: 50%;">50%</div>
+            </div>
         </div>
-      </section>
-      
-              
+        <div class="mb-3">
+            <label>STUDIO Editor</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 80%;">80%</div>
+            </div>
+        </div>
+    </div>
+
+<!-- 轮播图容器 -->
+<div id="portfolioCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+  <!-- 轮播图指示器 -->
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+  </div>
+
+  <!-- 轮播图内容 -->
+  <div class="carousel-inner text-center">
+      <div class="carousel-item active">
+          <img src="./imgs/u6547782251_A_hyper-realistic_depiction_of_a_UFO_based_on_ver_cc4d1dc7-156d-4851-af7e-5ff85a391703_1.png" class="d-block mx-auto img-fluid" alt="Portfolio 1">
+      </div>
+      <div class="carousel-item">
+          <img src="./imgs/u6547782251_software_engineering_--v_6.1_8e64c6ea-b9ce-41a0-8cae-da20ff831480_3.png" class="d-block mx-auto img-fluid" alt="Portfolio 2">
+      </div>
+  </div>
+
+  <!-- 轮播图控制按钮 -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+    <!-- 页脚 -->
+    <footer class="text-center py-3">
+        <p>Copyright © 2022 Studio Platform. All rights reserved.</p>
+    </footer>
+</div>
+
 </body>
 </html>

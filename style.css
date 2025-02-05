@@ -1,264 +1,155 @@
-/* 顶部导航栏 */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing:3px;
-  }
-
-  nav {
-    flex-grow:1;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* 导航项之间的间距 */
-    justify-content: flex-end; /* 将导航项整体向右对齐 */
-    align-items: center; /* 确保导航项垂直居中 */
-    margin: 0; /* 去掉默认外边距 */
-    padding: 0; /* 去掉默认内边距 */
-  }
-  
-  
-  /* 导航链接样式 */
-  nav ul li a {
-    color: #000;
-    text-decoration: none;
-    position: relative; /* 用于后续的伪元素定位 */
-    display: inline-block; /* 保持链接的默认内联块属性 */
-    padding: 5px 10px; /* 增加链接点击区域 */
-  }
-
-  .EN {
-    font-weight: bold; /* 使 "EN" 加粗 */
+/* 🌌 科幻背景 */
+body {
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
 }
 
-  .PRICING_DESIGN {
-    text-decoration:underline;
+/* 🚀 头部导航栏 */
+.navbar {
+  background: rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
 }
 
-  .nav-icons {
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
+.navbar-brand {
+  color: cyan !important;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px cyan;
+}
 
-  .nav-icons .dot{
-    width: 10px;
-    height: 10px;
-    background-color: #000;
-    border-radius: 50%;
-  }
+.navbar-nav .nav-link {
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
 
-  .nav-icons .menu-icon {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    position: relative;
-  }
-  
-  .nav-icons .menu-icon::before,
-  .nav-icons .menu-icon::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    left: 0;
-  }
-  
-  .nav-icons .menu-icon::before {
-    top: -8px;
-  }
-  
-  .nav-icons .menu-icon::after {
-    bottom: -8px;
-  }
+.navbar-nav .nav-link:hover {
+  color: cyan !important;
+  text-shadow: 0px 0px 10px cyan;
+}
 
-  /* 标题栏 */
-  .main-title {
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-  }
-  .main-title h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  .main-title span {
-    color: #000;
-    text-decoration: underline;
-  }
-  .main-title p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #555;
-  }
+/* 🖥️ 标题栏 */
+.main-title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 15px cyan;
+}
 
-  /* 个人简介 */
- /* Profile 图片部分 */
+/* 🌠 个人简介 */
 .profile-card {
-  text-align: left; /* 让 Profile 左对齐 */
-  border: none;
-  padding: 15px;
-  background-color: transparent;
-  max-width: 250px; /* 让 Profile 适应内容宽度 */
-  margin-left: 0; /* 让 Profile 靠左 */
-}
-
-/* 调整图片大小 */
-.profile-card img {
-  width: 150px !important;   /* 限制最大宽度 */
-  height: 150px !important;  /* 限制最大高度 */
-  max-width: 150px !important;
-  max-height: 150px !important;
-  border-radius: 50% !important; /* 确保强制应用 */
-  object-fit: cover; /* 让图片填充，而不会拉伸变形 */
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* Profile 卡片样式 */
-.profile-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #000;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border: 2px solid cyan;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
   max-width: 300px;
-  text-align: left;
+  margin: auto;
+  text-align: center;
 }
 
-/* 标题样式 */
-.profile-name {
-  font-size: 1.2rem;
-  font-weight: bold;
+/* 头像 */
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid cyan;
+  box-shadow: 0px 0px 10px cyan;
 }
 
-/* 个人信息介绍文本 */
-.profile-description {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-/* 高亮加粗的文字 */
-.highlight {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* 个人信息表格 */
-.profile-info {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 15px;
-}
-
-.profile-info td {
-  font-size: 0.85rem;
-  padding: 5px 0;
-  border-bottom: 1px solid #000;
-}
-
-.profile-info td:first-child {
-  font-weight: bold;
-}
-
-/* 按钮样式 */
+/* 🔵 个人按钮 */
 .profile-button {
   display: block;
   width: 100%;
   padding: 10px;
   font-size: 0.9rem;
-  border: 1px solid #000;
+  border: 2px solid cyan;
+  color: cyan;
   text-align: center;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-  /* EXPERIENCE SECTION */
-#experience h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 3px solid black;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.profile-button:hover {
+  background: cyan;
+  color: black;
+  box-shadow: 0px 0px 15px cyan;
 }
 
-.experience-item h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+/* 🎖 经验 */
+.experience-container {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border: 2px solid cyan;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 20px;
 }
 
-.experience-item span {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #666;
+.experience-container h2 {
+  color: cyan;
+  border-bottom: 2px solid cyan;
+  padding-bottom: 10px;
 }
 
-.experience-item p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.5;
+/* 🚀 科幻进度条 */
+.progress {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
 }
 
-/* 技能部分 */
-  .awards-skills {
-    display: flex;
-    gap: 20px;
-    margin-top: 40px;
-  }
-  .skills .skill {
-    margin-bottom: 10px;
-  }
-  .skills .progress-bar {
-    height: 5px;
-    background-color: #000;
-    border-radius: 2px;
-  }
-
-  @media (max-width: 768px) {
-    .profile-card {
-        padding: 10px;
-        text-align: center;
-    }
-    .profile-card img {
-        width: 100px;
-        height: 100px;
-    }
-    h1 {
-        font-size: 1.8rem;
-    }
-    p {
-        font-size: 0.9rem;
-    }
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
 }
 
-/* 动画效果 */
-/* 滚动触发动画 */
+/* 🚀 动态填充 */
+.progress-bar-fill {
+  background: linear-gradient(90deg, cyan, blue);
+  transition: width 1.5s ease-in-out;
+}
+
+/* 🎡 轮播图优化 */
+#portfolioCarousel {
+  border: 2px solid cyan;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+}
+
+.carousel-inner img {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.6);
+}
+
+/* 🎥 轮播图动画 */
+.carousel-inner {
+  max-width: 80%;
+  margin: auto;
+}
+
+/* ⚡️ 滚动动画 */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-in-out;
 }
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.progress-bar-fill {
-  transition: width 1.5s ease-in-out;
+/* 📱 响应式优化 */
+@media (max-width: 768px) {
+  .profile-card img {
+      width: 100px;
+      height: 100px;
+  }
+  h1 {
+      font-size: 1.8rem;
+  }
+  p {
+      font-size: 0.9rem;
+  }
 }
-
-  
-  

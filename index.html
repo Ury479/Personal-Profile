@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,170 +9,244 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./script.js">
     <link rel="stylesheet" href="./style.css">
-  </head>
+    <!-- AOS 资源 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+</head>
+
 <body>
+    <!-- 动画效果 -->
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // 初始化 AOS
+    </script>
 
-<!-- 顶部导航栏 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">MIONSILI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">DE</a></li>
-                <li class="nav-item"><a class="nav-link fw-bold" href="#">EN</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">BRANDING UNIVERSAL</a></li>
-                <li class="nav-item"><a class="nav-link text-decoration-underline" href="#">PRICING DESIGN</a></li>
-            </ul>
+
+    <!-- 顶部导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MIONSILI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">DE</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="#">EN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">BRANDING UNIVERSAL</a></li>
+                    <li class="nav-item"><a class="nav-link text-decoration-underline" href="#">PRICING DESIGN</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- 主要内容 -->
-<!-- 主要内容 -->
-<div class="container my-5">
-  <!-- 标题部分 -->
-  <div class="text-center mb-4">
-      <h1 class="fw-bold">Creative Designer Passion and <span class="text-decoration-underline">Experience</span>.</h1>
-      <p class="text-muted">User interface designer with a wealth of experience...</p>
-  </div>
+    <!-- 主要内容 -->
+    <!-- 主要内容 -->
+    <div class="container my-5">
+        <!-- 标题部分 -->
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Creative Designer Passion and <span class="text-decoration-underline">Experience</span>.
+            </h1>
+            <p class="text-muted">User interface designer with a wealth of experience...</p>
+        </div>
 
-  <!-- 个人信息 + 经验 -->
-  <div class="row">
-      <!-- 个人信息 -->
-      <div class="profile-card text-center p-3 border rounded shadow-sm">
-        <!-- 轮播图部分 -->
-        <div id="profileCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./imgs/u6547782251_Photograph._Subject_A_Qing_Dynasty_engineer_with__1ae9dd5f-91de-4619-b1f3-60be9ce8de18_1.png" class="d-block mx-auto rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Profile Image 1">
+        <!-- 个人信息 + 经验 -->
+        <div class="row">
+            <!-- 个人信息 -->
+            <div class="profile-card text-center p-3 border rounded shadow-sm">
+                <!-- 轮播图部分 -->
+                <div id="profileCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imgs/u6547782251_Photograph._Subject_A_Qing_Dynasty_engineer_with__1ae9dd5f-91de-4619-b1f3-60be9ce8de18_1.png"
+                                class="d-block mx-auto rounded-circle"
+                                style="width: 120px; height: 120px; object-fit: cover;" alt="Profile Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imgs/u6547782251_Photograph._Subject_A_Qing_Dynasty_engineer_with__a61037fd-1286-452b-bb30-f0370717cf79_1.png"
+                                class="d-block mx-auto rounded-circle"
+                                style="width: 120px; height: 120px; object-fit: cover;" alt="Profile Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imgs/u6547782251_Photograph._Subject_A_Qing_Dynasty_engineer_with__a61037fd-1286-452b-bb30-f0370717cf79_2.png"
+                                class="d-block mx-auto rounded-circle"
+                                style="width: 120px; height: 120px; object-fit: cover;" alt="Profile Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
-                <div class="carousel-item">
-                    <img src="./imgs/u6547782251_Photograph._Subject_A_Qing_Dynasty_engineer_with__a61037fd-1286-452b-bb30-f0370717cf79_1.png" class="d-block mx-auto rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Profile Image 2">
+
+                <!-- 个人信息部分 -->
+                <h2 class="profile-name">Mike Davids</h2>
+                <p class="profile-description">UI Designer based in New York with a passion for improving user
+                    experience.</p>
+                <table class="table table-borderless">
+                    <tr>
+                        <td><strong>Profession:</strong></td>
+                        <td>UI Designer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Date of Birth:</strong></td>
+                        <td>11 November 1985</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Education:</strong></td>
+                        <td>Higher Education</td>
+                    </tr>
+                </table>
+                <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#contactModal">SEND
+                    MESSAGE</button>
+            </div>
+
+            <!-- 经验 -->
+            <!-- Experience Section -->
+            <div class="col-md-8 experience-container" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="fw-bold">EXPERIENCE</h2>
+                <div class="experience-item">
+                    <h4>Horizon Value Expert</h4>
+                    <span class="experience-date">2021 – Present | UI Director</span>
+                    <p>Creating wireframe projects for innovative applications...</p>
                 </div>
-                <div class="carousel-item">
-                    <img src="./imgs/u6547782251_Photograph._Subject_A_Qing_Dynasty_engineer_with__a61037fd-1286-452b-bb30-f0370717cf79_2.png" class="d-block mx-auto rounded-circle" style="width: 120px; height: 120px; object-fit: cover;" alt="Profile Image 3">
+                <div class="experience-item">
+                    <h4>Puento – Visual Concept</h4>
+                    <span class="experience-date">2016 – 2021 | Senior Product Designer</span>
+                    <p>Creating projects for a product that was created in cooperation...</p>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+
+            <!-- Education Section -->
+            <div class="col-md-6">
+                <h2 class="fw-bold border-bottom pb-2" data-aos="fade-right" data-aos-duration="1000">EDUCATION</h2>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-duration="1000">
+                    <h5 class="fw-bold">Glory Charter High School</h5>
+                    <span class="badge bg-dark">2014 – 2017</span>
+                    <p class="text-muted">Graduated with honors.</p>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <h5 class="fw-bold">Guli CE Academy</h5>
+                    <span class="badge bg-dark">2012 – 2014</span>
+                    <p class="text-muted">College of marketing and promoting products on the Internet.</p>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <h5 class="fw-bold">Ambers Community College</h5>
+                    <span class="badge bg-dark">2009 – 2012</span>
+                    <p class="text-muted">Initial learning to program and implement new technologies on computer
+                        science.</p>
+                </div>
+            </div>
+
+            <!-- Awards Section -->
+            <div class="col-md-6">
+                <h2 class="fw-bold border-bottom pb-2" data-aos="fade-right" data-aos-duration="1000">AWARDS</h2>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-duration="1000">
+                    <h5 class="fw-bold">Interface Designs <span class="badge bg-dark">1</span></h5>
+                    <p class="text-muted">VERDO© | Agency Website Design</p>
+                    <span class="badge bg-light text-dark border">17 MAY 2022</span>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <h5 class="fw-bold">Graphics <span class="badge bg-dark">2</span></h5>
+                    <p class="text-muted">Bespoke Creative Ltd.</p>
+                    <span class="badge bg-light text-dark border">17 MAY 2022</span>
+                    <p class="text-muted">Fircon Group</p>
+                    <span class="badge bg-light text-dark border">5 JANUARY 2020</span>
+                </div>
+
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <h5 class="fw-bold">UI Design Excellence <span class="badge bg-dark">3</span></h5>
+                    <p class="text-muted">Global UX Conference</p>
+                    <span class="badge bg-light text-dark border">10 AUGUST 2021</span>
+                </div>
+            </div>
+
         </div>
-    
-        <!-- 个人信息部分 -->
-        <h2 class="profile-name">Mike Davids</h2>
-        <p class="profile-description">UI Designer based in New York with a passion for improving user experience.</p>
-        <table class="table table-borderless">
-            <tr><td><strong>Profession:</strong></td><td>UI Designer</td></tr>
-            <tr><td><strong>Date of Birth:</strong></td><td>11 November 1985</td></tr>
-            <tr><td><strong>Education:</strong></td><td>Higher Education</td></tr>
-        </table>
-        <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#contactModal">SEND MESSAGE</button>
+
     </div>
-    
-      <!-- 经验 -->
-      <div class="col-sm-12 col-md-8">
-          <h2 class="fw-bold border-bottom pb-2">EXPERIENCE</h2>
-          <div class="mb-3">
-              <h5 class="fw-bold">Horizon Value Expert</h5>
-              <p class="text-muted">2021 – Present | UI Director</p>
-              <p>Leading wireframe projects for innovative applications.</p>
-          </div>
-          <div class="mb-3">
-              <h5 class="fw-bold">Puento – Visual Concept</h5>
-              <p class="text-muted">2016 – 2021 | Senior Product Designer</p>
-              <p>Designing projects in collaboration with event creators.</p>
-          </div>
-      </div>
-  </div>
 
-  <!-- 教育 + 奖项 -->
-  <div class="row mt-5">
-      <div class="col-sm-12 col-md-6">
-          <h2 class="fw-bold border-bottom pb-2">EDUCATION</h2>
-          <div class="mb-3">
-              <h5 class="fw-bold">Glory Charter High School</h5>
-              <span class="badge bg-dark">2014 – 2017</span>
-              <p class="text-muted">Graduated with honors.</p>
-          </div>
-          <div class="mb-3">
-              <h5 class="fw-bold">Guli CE Academy</h5>
-              <span class="badge bg-dark">2012 – 2014</span>
-              <p class="text-muted">Marketing and product promotion specialist.</p>
-          </div>
-      </div>
+    <!-- 技能部分 -->
+    <div class="mt-5" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="fw-bold border-bottom pb-2">Skills</h2>
 
-      <div class="col-sm-12 col-md-6">
-          <h2 class="fw-bold border-bottom pb-2">AWARDS</h2>
-          <div class="mb-3">
-              <h5 class="fw-bold">Interface Designs <span class="badge bg-dark">1</span></h5>
-              <p class="text-muted">VERDO© | Agency Website Design</p>
-          </div>
-          <div class="mb-3">
-              <h5 class="fw-bold">Graphics <span class="badge bg-dark">2</span></h5>
-              <p class="text-muted">Bespoke Creative Ltd.</p>
-          </div>
-      </div>
-  </div>
-</div>
-
-    <!-- 技能 -->
-    <div class="mt-5">
-        <h2>Skills</h2>
+        <!-- Microsoft Office -->
         <div class="mb-3">
             <label>Microsoft Office</label>
             <div class="progress">
-                <div class="progress-bar" style="width: 50%;">50%</div>
+                <div class="progress-bar progress-bar-fill" data-value="50" style="width: 50%;">50%</div>
             </div>
         </div>
+
+        <!-- STUDIO Editor -->
         <div class="mb-3">
             <label>STUDIO Editor</label>
             <div class="progress">
-                <div class="progress-bar bg-success" style="width: 80%;">80%</div>
+                <div class="progress-bar progress-bar-fill bg-success" data-value="80" style="width: 80%;">80%</div>
             </div>
         </div>
     </div>
 
-<!-- 轮播图容器 -->
-<div id="portfolioCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
-  <!-- 轮播图指示器 -->
-  <div class="carousel-indicators">
-      <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
-  </div>
 
-  <!-- 轮播图内容 -->
-  <div class="carousel-inner text-center">
-      <div class="carousel-item active">
-          <img src="./imgs/u6547782251_A_hyper-realistic_depiction_of_a_UFO_based_on_ver_cc4d1dc7-156d-4851-af7e-5ff85a391703_1.png" class="d-block mx-auto img-fluid" alt="Portfolio 1">
-      </div>
-      <div class="carousel-item">
-          <img src="./imgs/u6547782251_software_engineering_--v_6.1_8e64c6ea-b9ce-41a0-8cae-da20ff831480_3.png" class="d-block mx-auto img-fluid" alt="Portfolio 2">
-      </div>
-  </div>
 
-  <!-- 轮播图控制按钮 -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-  </button>
-</div>
+    <!-- 轮播图部分 -->
+    <!-- 轮播图容器 -->
+    <div id="portfolioCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-wrap="true">
+        <!-- 轮播图指示器 -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3"></button>
+        </div>
 
+        <!-- 轮播图内容 -->
+        <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+                <img src="./imgs/u6547782251_A_hyper-realistic_depiction_of_a_UFO_based_on_ver_cc4d1dc7-156d-4851-af7e-5ff85a391703_1.png"
+                    class="d-block mx-auto img-fluid" alt="Portfolio 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./imgs/u6547782251_software_engineering_--v_6.1_8e64c6ea-b9ce-41a0-8cae-da20ff831480_3.png"
+                    class="d-block mx-auto img-fluid" alt="Portfolio 2">
+            </div>
+            <div class="carousel-item">
+                <img src="./imgs/u6547782251_Science_fiction_--v_6.1_0cd6d444-0f26-4095-b65a-eb459edf9b40_0 (1).png"
+                    class="d-block mx-auto img-fluid" alt="Portfolio 3">
+            </div>
+            <div class="carousel-item">
+                <img src="./imgs/u6547782251_Science_fiction_--v_6.1_fa55d887-1c4d-43c9-8b52-ecc9c6e29213_2 (1).png"
+                    class="d-block mx-auto img-fluid" alt="Portfolio 4">
+            </div>
+        </div>
+
+        <!-- 轮播图控制按钮 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <!-- 页脚 -->
     <footer class="text-center py-3">
         <p>Copyright © 2022 Studio Platform. All rights reserved.</p>
     </footer>
-</div>
+    </div>
 
 </body>
+
 </html>

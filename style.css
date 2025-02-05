@@ -256,5 +256,9 @@ header {
   transform: translateY(0);
 }
 
+.progress-bar-fill {
+  transition: width 1.5s ease-in-out;
+}
+
   
   

@@ -1,66 +1,102 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // ✅ 1️⃣ 初始化 AOS 动画库
+    // ✅ Initialize AOS Animation Library
     AOS.init({
-        duration: 1000, // 过渡时长
+        duration: 1000,
         easing: "ease-in-out",
-        once: true, // 触发一次
+        once: true,
     });
 
-    // ✅ 2️⃣ 滚动触发动画 + 科幻发光
+    // ✅ Scroll-triggered animations + Sci-fi glowing effect
     function revealElements() {
-        let reveals = document.querySelectorAll(".reveal");
-        reveals.forEach((element) => {
+        document.querySelectorAll(".reveal").forEach((element) => {
             let windowHeight = window.innerHeight;
             let elementTop = element.getBoundingClientRect().top;
             let elementVisible = 150;
 
             if (elementTop < windowHeight - elementVisible) {
-                element.classList.add("active");
-                element.classList.add("neon-glow"); // 添加科幻霓虹光效
+                element.classList.add("active", "neon-glow"); // Add Sci-fi glow effect
             }
         });
     }
     window.addEventListener("scroll", revealElements);
 
-    // ✅ 3️⃣ 平滑滚动至锚点
+    // ✅ Smooth scrolling to anchors
     document.querySelectorAll("a[href^='#']").forEach((anchor) => {
         anchor.addEventListener("click", function (event) {
             event.preventDefault();
-            let targetId = this.getAttribute("href");
-            document.querySelector(targetId).scrollIntoView({
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
                 behavior: "smooth",
                 block: "start",
             });
         });
     });
 
-    // ✅ 4️⃣ 技能进度条填充动画（科幻条形渐变）
+    // ✅ Skill Progress Bar Animation (Sci-fi gradient effect)
     function fillProgressBars() {
         document.querySelectorAll(".progress-bar-fill").forEach((bar) => {
             let targetWidth = bar.getAttribute("data-value") + "%";
             bar.style.width = targetWidth;
-            bar.classList.add("neon-glow"); // 添加光效
+            bar.classList.add("neon-glow"); // Add glow effect
         });
     }
 
-    // ✅ 监听 `AOS` 触发，确保动画完成后填充进度条
+    // ✅ Monitor `AOS` triggers, ensure bars fill after animation
     document.querySelectorAll(".progress-bar-fill").forEach((bar) => {
-        bar.closest(".progress").setAttribute("data-aos", "fade-in");
-        bar.closest(".progress").setAttribute("data-aos-duration", "1200");
+        let progressContainer = bar.closest(".progress");
+        if (progressContainer) {
+            progressContainer.setAttribute("data-aos", "fade-in");
+            progressContainer.setAttribute("data-aos-duration", "1200");
+        }
 
         bar.addEventListener("transitionend", function () {
-            let value = bar.getAttribute("data-value");
-            bar.style.width = value + "%";
+            bar.style.width = bar.getAttribute("data-value") + "%";
         });
     });
 
-    // ✅ 5️⃣ 轮播图优化：增加无缝切换 & 科幻滤镜
-    let portfolioCarousel = new bootstrap.Carousel("#portfolioCarousel", {
-        interval: 3000, // 每 3 秒自动切换
-        wrap: true, // 允许循环播放
+    // ✅ Optimize Carousel: Seamless transitions & Sci-fi filter
+    new bootstrap.Carousel("#portfolioCarousel", {
+        interval: 3000, // Auto-switch every 3 seconds
+        wrap: true, // Enable infinite loop
         ride: "carousel",
     });
 
-    // ✅ 6️⃣ 页面加载时填充进度条
+    // ✅ Fill progress bars on page load
     fillProgressBars();
+
+    // ✅ Contact Form Submission - Send Email via mailto:
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default page refresh
+
+        // Get form values
+        let email = document.getElementById("email").value.trim();
+        let subject = document.getElementById("subject").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        // Validate fields
+        if (!email || !subject || !message) {
+            alert("⚠️ Please fill out all fields before sending the email.");
+            return;
+        }
+
+        // Encode email content to handle special characters properly
+        let mailtoLink = `mailto:YIHAO.WANG@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
+
+        // Open default email app
+        window.location.href = mailtoLink;
+
+        // ✅ Close Modal After Sending
+        let contactModal = document.getElementById("contactModal");
+        let modalInstance = bootstrap.Modal.getInstance(contactModal);
+        if (modalInstance) {
+            modalInstance.hide();
+        }
+
+        // ✅ Remove modal backdrop manually
+        setTimeout(() => {
+            let backdrop = document.querySelector(".modal-backdrop");
+            if (backdrop) {
+                backdrop.remove();
+            }
+        }, 500);
+    });
 });

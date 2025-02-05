@@ -1,11 +1,12 @@
-/* 🌌 科幻背景 */
+/* 🌌 Sci-Fi Background */
 body {
   background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
   color: #fff;
   font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
 }
 
-/* 🚀 头部导航栏 */
+/* 🚀 Sci-Fi Navbar */
 .navbar {
   background: rgba(0, 0, 0, 0.3) !important;
   box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
@@ -20,7 +21,7 @@ body {
 
 .navbar-nav .nav-link {
   color: #fff !important;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
@@ -28,45 +29,62 @@ body {
   text-shadow: 0px 0px 10px cyan;
 }
 
-/* 🖥️ 标题栏 */
+/* 🖥️ Title Section */
 .main-title h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   text-shadow: 0px 0px 15px cyan;
+  animation: glitch 1.5s infinite alternate;
 }
 
-/* 🌠 个人简介 */
+/* Glitch Animation */
+@keyframes glitch {
+  0% {
+    text-shadow: 0px 0px 10px cyan, 2px 2px 0px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    text-shadow: -2px -2px 0px cyan, -3px -3px 0px rgba(0, 255, 255, 0.4);
+  }
+}
+
+/* 🌠 Sci-Fi Profile Card */
 .profile-card {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   border: 2px solid cyan;
   box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
   backdrop-filter: blur(10px);
-  max-width: 300px;
+  max-width: 350px;
   margin: auto;
   text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* 头像 */
+.profile-card:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Picture */
 .profile-card img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 3px solid cyan;
-  box-shadow: 0px 0px 10px cyan;
+  box-shadow: 0px 0px 15px cyan;
 }
 
-/* 🔵 个人按钮 */
+/* 🔵 Sci-Fi Buttons */
 .profile-button {
   display: block;
   width: 100%;
-  padding: 10px;
-  font-size: 0.9rem;
+  padding: 12px;
+  font-size: 1rem;
   border: 2px solid cyan;
   color: cyan;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-button:hover {
@@ -75,14 +93,72 @@ body {
   box-shadow: 0px 0px 15px cyan;
 }
 
-/* 🎖 经验 */
+/* ⚡️ Sci-Fi Neon Glow Effect */
+.neon-glow {
+  border: 2px solid #00ffff;
+  box-shadow: 0px 0px 8px #00ffff;
+  text-shadow: 0px 0px 8px #00ffff;
+  transition: all 0.3s ease-in-out;
+}
+.neon-glow:hover {
+  box-shadow: 0px 0px 15px #00ffff;
+}
+
+/* 🌌 Fix Dim Background Issue */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Ensure modal closes properly */
+.modal.fade {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure modal is fully hidden when closed */
+.modal {
+  display: none !important;
+}
+
+/* 🎨 Sci-Fi Themed Send Button */
+#contactForm button {
+  background: linear-gradient(90deg, cyan, blue);
+  border: 2px solid cyan;
+  color: white;
+  text-shadow: 0px 0px 5px cyan;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+#contactForm button:hover {
+  background: cyan;
+  color: black;
+  box-shadow: 0px 0px 15px cyan;
+}
+
+/* 💡 Improve Modal Visibility */
+.modal-content {
+  background-color: #111;
+  color: white;
+  border: 2px solid cyan;
+  box-shadow: 0px 0px 20px cyan;
+  backdrop-filter: blur(15px);
+}
+
+
+/* 🛸 Sci-Fi Experience Section */
 .experience-container {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   border: 2px solid cyan;
-  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+  box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.4);
   backdrop-filter: blur(10px);
-  padding: 20px;
+  padding: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-container:hover {
+  transform: scale(1.02);
 }
 
 .experience-container h2 {
@@ -91,9 +167,9 @@ body {
   padding-bottom: 10px;
 }
 
-/* 🚀 科幻进度条 */
+/* 🔷 Sci-Fi Skill Progress Bars */
 .progress {
-  height: 8px;
+  height: 10px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
@@ -103,15 +179,15 @@ body {
   height: 100%;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
-}
-
-/* 🚀 动态填充 */
-.progress-bar-fill {
-  background: linear-gradient(90deg, cyan, blue);
   transition: width 1.5s ease-in-out;
 }
 
-/* 🎡 轮播图优化 */
+/* Neon Gradient Progress Fill */
+.progress-bar-fill {
+  background: linear-gradient(90deg, cyan, blue);
+}
+
+/* 🎡 Sci-Fi Carousel */
 #portfolioCarousel {
   border: 2px solid cyan;
   box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
@@ -120,15 +196,20 @@ body {
 .carousel-inner img {
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.6);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* 🎥 轮播图动画 */
+.carousel-inner img:hover {
+  transform: scale(1.05);
+}
+
+/* 🎥 Sci-Fi Carousel Animation */
 .carousel-inner {
   max-width: 80%;
   margin: auto;
 }
 
-/* ⚡️ 滚动动画 */
+/* 🌠 Sci-Fi Scroll Animation */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -140,14 +221,14 @@ body {
   transform: translateY(0);
 }
 
-/* 📱 响应式优化 */
+/* 📱 Responsive Optimizations */
 @media (max-width: 768px) {
   .profile-card img {
       width: 100px;
       height: 100px;
   }
   h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
   }
   p {
       font-size: 0.9rem;
